@@ -1,5 +1,6 @@
+{% load static %}
 <header>
-    <h1>Aerolícita/ pode ser a logo tbm</h1>
+    <img src="{% static 'global/img/header-logo.png'%}" alt="" srcset="">
     <nav>
         <ul>
             <li><a href="#">Página Inicial</a></li>
@@ -7,9 +8,13 @@
             <li><a href="#">Importante</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
+        <button>
+            {% if user.is_authenticated %}
+            <a href="#">Logout</a>
+            {% else %}
+            <a href="#">Login</a>
+            {% endif %}
+        </button>
     </nav>
-
-    <button>
-        Acesso restrito
-    </button>
 </header>
+<link rel="stylesheet" href="{% static 'global/css/header.css' %}">
