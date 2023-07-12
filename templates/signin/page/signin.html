@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'signin/css/style.css' %}">
+    <title>Login</title>
+</head>
+
+<body>
+    <main>
+        <section class="signin-container">
+            <img src="{% static 'global/img/header-logo.png' %}" alt="" srcset="">
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" id="username" placeholder="Usuário">
+                <input type="password" name="password" id="password" placeholder="Senha">
+                <button type="submit">Entrar</button>
+                <a href="#">Esqueci minha senha</a>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
