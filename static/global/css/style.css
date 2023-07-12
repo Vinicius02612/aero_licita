@@ -1,17 +1,27 @@
+:root {
+    --header-font: 'Roboto', sans-serif;
+    --main-font: 'Saira Semi Condensed', sans-serif;
+    --main-background-color: #00A473;
+    --footer-background-color: #397F8B;
+}
+
 * {
     margin: 0;
     padding: 0;
-    color: auto
+    color: auto;
 }
 
 html {
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 body {
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,36 +32,6 @@ a {
     color: #111;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background: #576D6D;
-    height: 4rem;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    list-style: none;
-}
-
-nav ul li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    background: #A3F2EA;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
-
 
 main {
     display: flex;
@@ -59,12 +39,4 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-}
-
-header button {
-    background: #A3F2EA;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    border: none;
 }
