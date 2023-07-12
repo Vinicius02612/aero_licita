@@ -4,6 +4,7 @@ main {
 
 .main-tickets {
     width: 100%;
+    min-height: calc(100vh - 7rem);
     height: auto;
     display: flex;
     flex-direction: column;
@@ -30,6 +31,10 @@ main {
     z-index: 1;
     width: 50%;
     text-align: center;
+}
+
+.not-logged-description {
+    color: #000
 }
 
 .tickets-container {

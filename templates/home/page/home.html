@@ -14,9 +14,21 @@
         <section class="main-tickets">
             <img src="{% static 'home/img/first_image.png' %}">
             <div class="presentation">
-                <p> Viage com conforto, reserve sua passagem com a <span style="font-weight: bold;">AeroLicita!</span>
+                {% if user.is_authenticated and user.is_staff %}
+                <p>
+                    Viage com conforto, reserve sua passagem com a <span style="font-weight: bold;">AeroLicita!</span>
                 </p>
+                {% else %}
+                <p class="not-logged-description">
+                    Viage com conforto, reserve sua passagem com a <span style="font-weight: bold;">AeroLicita!</span>
+                    <br>
+                    <span style="font-size: 1.5rem;">Faça o <a href="/signin/"
+                            style="color: var(--main-background-color); font-weight: 600;">login</a> para agendar sua
+                        viagem</span>
+                </p>
+                {% endif %}
             </div>
+            {% if user.is_authenticated and user.is_staff %}
             <div class="tickets-container">
                 <div class="ticket">
                     <h2>Nome/Logo da empresa</h2>
@@ -67,6 +79,7 @@
                     </button>
                 </div>
             </div>
+            {% endif %}
         </section>
 
         <section class="main-infos">
