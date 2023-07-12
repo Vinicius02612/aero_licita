@@ -1,0 +1,283 @@
+main {
+    font-family: var(--main-font);
+}
+
+.main-tickets {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding: 3rem 0;
+}
+
+.main-tickets img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.presentation {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #FFFFFF;
+    z-index: 1;
+    width: 50%;
+    text-align: center;
+}
+
+.tickets-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    z-index: 1;
+    padding: 2rem 0;
+}
+
+.ticket {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    padding: 3rem;
+    color: var(--main-background-color);
+}
+
+.values-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0
+}
+
+.ticket-value {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+
+}
+
+.ticket button {
+    background: var(--main-background-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ticket button:hover {
+    background: #00A473;
+}
+
+.ticket button a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.main-infos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 3rem 0;
+}
+
+.info-container-pattern {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-background-color);
+}
+
+.infos-title-separator {
+    width: 70%;
+    height: 1px;
+    background-color: var(--main-background-color);
+    margin-bottom: 2rem;
+}
+
+.info-container-pattern h2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.infos-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.infos-content img {
+    width: 45%;
+    height: auto;
+}
+
+.infos-content p {
+    width: 50%;
+    padding: 1rem;
+}
+
+.our-values-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 0
+}
+
+.our-value {
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.our-value img {
+    width: 100px;
+    height: auto;
+}
+
+.our-value p {
+    width: auto;
+    padding: 0;
+    color: #111;
+}
+
+.bold {
+    font-weight: 600;
+    color: var(--main-background-color);
+}
+
+.left {
+    width: 100%;
+    height: auto;
+}
+
+.right {
+    position: relative;
+    align-self: flex-end;
+    right: 0;
+    width: 60%;
+    height: auto;
+}
+
+.contact-us {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 3rem 0;
+    background: #00A4733D;
+}
+
+.contact-us h2,
+.contact-us p {
+    color: var(--main-background-color)
+}
+
+.contact-us h2 {
+    font-size: 3rem;
+}
+
+.contact-us p {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.contact-us-content {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: #FFFFFF;
+    padding: 4rem;
+    border-radius: .2rem
+}
+
+form input {
+    width: 100%;
+    height: 2rem;
+    border: var(--main-background-color) 1px solid;
+    border-radius: .2rem;
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+form input::placeholder {
+    color: var(--main-background-color);
+}
+
+form textarea {
+    width: 100%;
+    height: 8rem;
+    border: var(--main-background-color) 1px solid;
+    border-radius: .2rem;
+    padding: .5rem;
+    font-size: 1rem;
+    resize: none;
+}
+
+form textarea::placeholder {
+    color: var(--main-background-color);
+}
+
+form button {
+    width: 70%;
+    height: 3rem;
+    background: var(--main-background-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: .2rem;
+    padding: .5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: center;
+}
