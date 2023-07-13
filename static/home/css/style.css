@@ -260,6 +260,11 @@ form input::placeholder {
     color: var(--main-background-color);
 }
 
+form input:focus {
+    outline: none;
+    border: orange 1px solid;
+}
+
 form textarea {
     width: 100%;
     height: 8rem;
@@ -273,6 +278,13 @@ form textarea {
 form textarea::placeholder {
     color: var(--main-background-color);
 }
+
+form textarea:focus {
+    outline: none;
+    border: orange 1px solid;
+}
+
+
 
 form button {
     width: 70%;
