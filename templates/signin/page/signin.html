@@ -14,7 +14,7 @@
     <main>
         <section class="signin-container">
             <img src="{% static 'global/img/header-logo.png' %}" alt="" srcset="">
-            <form action="" method="post">
+            <form action="/login/" method="post">
                 {% csrf_token %}
                 <input type="text" name="username" id="username" placeholder="Usuário">
                 <input type="password" name="password" id="password" placeholder="Senha">
