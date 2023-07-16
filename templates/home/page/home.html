@@ -5,16 +5,44 @@
 <head>
     {% include 'global/includes/head.html' %}
     <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ce9220c6d4.js" crossorigin="anonymous"></script>
+
     <title>AeroLicita</title>
 </head>
 
 <body>
     {% include 'global/includes/header.html' %}
+    <div class="menu">
+        <div class="menu-content">
+            <div class="menu-header">
+                <img src="{% static 'global/img/header-logo.png' %}">
+            </div>
+            <div class="menu-links">
+                <a href="/">Página Inicial</a>
+                <a href="#">Quem Somos</a>
+                <a href="#">Importante</a>
+                <a href="#">Contanto</a>
+                {% if user.is_authenticated %}
+                {% if user.is_staff %}
+                <a href="/admin-management-page/">Administração</a>
+                {% endif %}
+                <a href="/logout/">Logout</a>
+                {% else %}
+                <a href="/signin/">Login</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <button class="open-menu">
+        <div class="bar bar-id-1"></div>
+        <div class="bar bar-id-2"></div>
+        <div class="bar bar-id-3"></div>
+    </button>
     <main>
         <section class="main-tickets">
             <img src="{% static 'home/img/first_image.png' %}">
             <div class="presentation">
-                {% if user.is_authenticated and user.is_staff %}
+                {% if user.is_authenticated %}
                 <p>
                     Viage com conforto, reserve sua passagem com a <span style="font-weight: bold;">AeroLicita!</span>
                 </p>
@@ -23,12 +51,13 @@
                     Viage com conforto, reserve sua passagem com a <span style="font-weight: bold;">AeroLicita!</span>
                     <br>
                     <span style="font-size: 1.5rem;">Faça o <a href="/signin/"
-                            style="color: var(--main-background-color); font-weight: 600;">login</a> para agendar sua
+                            style="color: var(--main-background-color); text-decoration: underline; font-weight: 600;">login</a>
+                        para agendar sua
                         viagem</span>
                 </p>
                 {% endif %}
             </div>
-            {% if user.is_authenticated and user.is_staff %}
+            {% if user.is_authenticated %}
             <div class="tickets-container">
                 <div class="ticket">
                     <h2>Nome/Logo da empresa</h2>
@@ -178,6 +207,7 @@
         </section>
     </main>
     {% include 'global/includes/footer.html' %}
+    <script src="{% static 'home/js/menu.js' %}"></script>
 </body>
 
 </html>

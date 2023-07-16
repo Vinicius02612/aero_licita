@@ -3,14 +3,16 @@
     <img src="{% static 'global/img/header-logo.png'%}" alt="" srcset="">
     <nav>
         <ul>
-            <li><a href="#">Página Inicial</a></li>
+            <li><a href="/homepage/">Página Inicial</a></li>
             <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Importante</a></li>
             <li><a href="#">Contato</a></li>
+            {% if user.is_staff %}
+            <li><a href="/admin-management-page/">Administração</a></li>
+            {% endif %}
         </ul>
         <div>
             {% if user.is_authenticated %}
-            <a href="#">Logout</a>
+            <a href={% url 'core:logout'%}>Logout</a>
             {% else %}
             <a href={% url 'core:signin' %}>Login</a>
             {% endif %}
