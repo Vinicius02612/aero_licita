@@ -3,7 +3,7 @@ body {
 }
 
 main {
-    width: 100vh;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -72,4 +72,17 @@ form button:hover {
 form a {
     color: #00A473;
     text-decoration: underline;
+}
+
+@media screen and (max-width:590px) {
+    .signin-container {
+        width: 90%;
+        height: 100%;
+        padding: 2rem;
+    }
+
+    form button {
+        width: 100%;
+        padding: 0 1rem;
+    }
 }

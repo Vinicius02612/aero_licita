@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% include 'global/includes/head.html' %}
+    <link rel="stylesheet" href="{% static 'contact/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ce9220c6d4.js" crossorigin="anonymous"></script>
+
+    <title>AeroLicita | Sobre</title>
+</head>
+
+<body>
+    {% include 'global/includes/header.html' %}
+    <main>
+        <section class="contact-us">
+            <h2>Entre em contato conosco</h2>
+            <p>Agende sua viagem com a AeoroLicita</p>
+            <div class="contact-us-content">
+                <img src="{% static 'home/img/cardContato.png' %}">
+                <form action="">
+                    <input type="text" placeholder="Nome">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Assunto">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+                    <button>Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    {% include 'global/includes/footer.html' %}
+</body>
+</html>

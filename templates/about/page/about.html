@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% include 'global/includes/head.html' %}
+    <link rel="stylesheet" href="{% static 'about/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ce9220c6d4.js" crossorigin="anonymous"></script>
+
+    <title>AeroLicita | Sobre</title>
+</head>
+
+<body>
+    {% include 'global/includes/header.html' %}
+
+    <main>
+        <section class="main-infos">
+            <div class="mission-container info-container-pattern">
+                <h2>Missão</h2>
+                <div class="infos-title-separator"></div>
+                <div class="infos-content">
+                    <img src="{% static 'home/img/mission_image.png' %}">
+                    <p>Nossa missão é fornecer serviços especializados de agência de viagens com ênfase em contratos
+                        públicos, oferecendo soluções completas e personalizadas que atendam às necessidades específicas
+                        de
+                        nossos clientes. Buscamos economicidade e garantindo eficiência, transparência e resultados
+                        excepcionais.</p>
+
+                </div>
+            </div>
+            <div class="vision-container info-container-pattern">
+                <h2>Visão</h2>
+                <div class="infos-title-separator"></div>
+
+                <div class="infos-content">
+                    <p>
+                        Nossa visão é nos tornar a principal referência no mercado de agências de viagens especializadas
+                        em
+                        contratos públicos, reconhecidos pela excelência de nossos serviços, pelo compromisso com a
+                        satisfação do cliente e pela capacidade de superar suas expectativas. Almejamos ser uma empresa
+                        inovadora, ágil e confiável, que contribui para o sucesso dos negócios de nossos clientes por
+                        meio
+                        de soluções diferenciadas e de alta qualidade.
+                    </p>
+                    <img src="{% static 'home/img/vision_image.png' %}">
+                </div>
+            </div>
+            <div class="our-values info-container-pattern">
+                <h2>Nossos valores</h2>
+                <div class="infos-title-separator"></div>
+
+                <div class="our-values-content">
+                    <div class="our-value left">
+                        <img src="{% static 'home/img/excellence.png' %}">
+                        <p>
+                            <span class="bold">Excelência:</span>
+                            Buscamos a excelência em tudo o que fazemos, desde a qualidade dos serviços
+                            até a
+                            atenção aos detalhes, visando sempre superar as expectativas dos nossos clientes.
+                        </p>
+                    </div>
+                    <div class="our-value right">
+                        <img src="{% static 'home/img/integrity.png' %}">
+                        <p><span class="bold">Integridade:</span> Agimos com ética, transparência e honestidade em todos
+                            os aspectos do nosso
+                            trabalho, mantendo relacionamentos baseados na confiança e no respeito.</p>
+                    </div>
+                    <div class="our-value left">
+                        <img src="{% static 'home/img/orientation.png' %}">
+                        <p><span class="bold">Orientação ao cliente</span> Nosso foco principal é entender e atender as
+                            necessidades dos nossos
+                            clientes, fornecendo soluções personalizadas e um atendimento excepcional, com agilidade e
+                            eficiência.</p>
+                    </div>
+                    <div class="our-value right">
+                        <img src="{% static 'home/img/innovation.png' %}">
+                        <p><span class="bold">Inovação</span> Estamos sempre em busca de novas ideias e abordagens
+                            criativas para melhorar nossos
+                            serviços e processos, adaptando-nos às demandas do mercado e antecipando tendências.</p>
+                    </div>
+                    <div class="our-value left">
+                        <img src="{% static 'home/img/collaboration.png' %}">
+                        <p><span class="bold">Colaboração</span> Valorizamos o trabalho em equipe, promovendo um
+                            ambiente colaborativo onde as
+                            ideias são compartilhadas e o conhecimento é aproveitado para alcançar resultados
+                            superiores. </p>
+                    </div>
+                    <div class="our-value right">
+                        <img src="{% static 'home/img/responsibility.png' %}">
+
+                        <p><span class="bold">Colaboração</span> Valorizamos o trabalho em equipe, promovendo um
+                            ambiente colaborativo onde as
+                            ideias são compartilhadas e o conhecimento é aproveitado para alcançar resultados
+                            superiores. </p>
+                    </div>
+        </section>
+    </main>
+    {% include 'global/includes/footer.html' %}
+</body>
+</html>

@@ -72,7 +72,11 @@ main {
 
 .side-menu ul li {
     height: 3rem;
-    width: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
     transition: all .3s ease-in-out;
 }
 

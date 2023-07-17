@@ -1,0 +1,28 @@
+{% load static %}
+<div class="menu">
+    <div class="menu-content">
+        <div class="menu-header">
+            <img src="{% static 'global/img/header-logo.png' %}">
+        </div>
+        <div class="menu-links">
+            <a href="/">Página Inicial</a>
+            <a href="/about/">Quem Somos</a>
+            <a href="/contact/">Contanto</a>
+            {% if user.is_authenticated %}
+            {% if user.is_staff %}
+            <a href="/admin-management-page/">Administração</a>
+            {% endif %}
+            <a href="/logout/">Logout</a>
+            {% else %}
+            <a href="/signin/">Login</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<button class="open-menu">
+    <div class="bar bar-id-1"></div>
+    <div class="bar bar-id-2"></div>
+    <div class="bar bar-id-3"></div>
+</button>
+<link rel="stylesheet" href="{% static 'global/css/menu.css' %}">
+<script src="{% static 'global/js/menu.js' %}"></script>

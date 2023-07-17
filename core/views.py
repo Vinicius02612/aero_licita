@@ -22,6 +22,14 @@ def signinpage(request):
     return render(request, "signin/page/signin.html")
 
 
+def aboutpage(request):
+    return render(request, "about/page/about.html")
+
+
+def contactpage(request):
+    return render(request, "contact/page/contact.html")
+
+
 @csrf_exempt
 def loginview(request):
     if request.method == "POST":

@@ -3,9 +3,9 @@
     <img src="{% static 'global/img/header-logo.png'%}" alt="" srcset="">
     <nav>
         <ul>
-            <li><a href="/homepage/">Página Inicial</a></li>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="/">Página Inicial</a></li>
+            <li><a href="/about/">Quem somos</a></li>
+            <li><a href="/contact/">Contato</a></li>
             {% if user.is_staff %}
             <li><a href="/admin-management-page/">Administração</a></li>
             {% endif %}
@@ -19,4 +19,5 @@
         </div>
     </nav>
 </header>
+{% include 'global/includes/menu.html' %}
 <link rel="stylesheet" href="{% static 'global/css/header.css' %}">
