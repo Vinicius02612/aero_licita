@@ -1,5 +1,15 @@
 let button_access_menu = document.querySelector(".open-menu");
 let menu = document.querySelector(".menu");
+window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    if (scroll > 0) {
+        document.querySelector("header").classList.add("scroll");
+    }
+    else {
+        document.querySelector("header").classList.remove("scroll");
+    }
+});
+
 window.addEventListener("resize", () => {
     if (window.innerWidth > 848) {
         console.log("funcionou")
