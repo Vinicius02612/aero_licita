@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'global/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ce9220c6d4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>Reservar Passagem</title>
+</head>
+
+<body>
+    {% include 'admin/includes/header.html' %}
+
+    <div class="row-container">
+        {% include 'admin/includes/sidemenu.html' %}
+        <main>
+            <section class="main-content">
+                <h2>Reservar Passagem</h2>
+                <div class="separator"></div>
+
+                <form action="">
+
+                </form>
+            </section>
+        </main>
+    </div>
+
+    {% include 'global/includes/footer.html' %}
+</body>
+
+</html>

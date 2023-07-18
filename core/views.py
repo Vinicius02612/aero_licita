@@ -64,40 +64,50 @@ def logoutuser(request):
 def adminpage(request):
     tickets = [
         {
-            "company": "Company 1",
-            "date": "01/01/2020",
-            "route": "Route 1",
-            "departure": "Departure 1",
-            "arrival": "Arrival 1",
-            "value": "Value 1",
-            "quantity": "Quantity 1",
+            "id": 2,
+            "company": "Latam airline",
+            "date": "04/08/2023",
+            "route": "GRU/PNZ",
+            "departure": "23:40",
+            "arrival": "02:10",
+            "value": "R$ 950,00",
+            "quantity": "10",
         },
         {
-            "company": "Company 1",
-            "date": "01/01/2020",
-            "route": "Route 1",
-            "departure": "Departure 1",
-            "arrival": "Arrival 1",
-            "value": "Value 1",
-            "quantity": "Quantity 1",
+            "id": 3,
+            "company": "Latam airline",
+            "date": "04/08/2023",
+            "route": "GRU/PNZ",
+            "departure": "23:40",
+            "arrival": "02:10",
+            "value": "R$ 950,00",
+            "quantity": "10",
         },
         {
-            "company": "Company 1",
-            "date": "01/01/2020",
-            "route": "Route 1",
-            "departure": "Departure 1",
-            "arrival": "Arrival 1",
-            "value": "Value 1",
-            "quantity": "Quantity 1",
+            "id": 4,
+            "company": "Latam airline",
+            "date": "04/08/2023",
+            "route": "GRU/PNZ",
+            "departure": "23:40",
+            "arrival": "02:10",
+            "value": "R$ 950,00",
+            "quantity": "10",
         },
         {
-            "company": "Company 1",
-            "date": "01/01/2020",
-            "route": "Route 1",
-            "departure": "Departure 1",
-            "arrival": "Arrival 1",
-            "value": "Value 1",
-            "quantity": "Quantity 1",
+            "id": 5,
+            "company": "Latam airline",
+            "date": "04/08/2023",
+            "route": "GRU/PNZ",
+            "departure": "23:40",
+            "arrival": "02:10",
+            "value": "R$ 950,00",
+            "quantity": "10",
         },
     ]
-    return render(request, "admin/page/admin.html", context={"tickets": tickets})
+    return render(request, "admin/pages/admin.html", context={"tickets": tickets})
+
+
+@csrf_exempt
+@login_required(login_url="/signin", redirect_field_name="redirect_to")
+def bookticketpage(request, slug):
+    return render(request, "admin/pages/bookticket.html", context={"slug": slug})

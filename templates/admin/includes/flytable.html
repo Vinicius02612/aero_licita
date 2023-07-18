@@ -1,0 +1,32 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nome/Empresa</th>
+            <th>Data</th>
+            <th>Rota</th>
+            <th>Partida</th>
+            <th>Chegada</th>
+            <th>Valor c. cotação</th>
+            <th>Quantidade</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ticket in tickets %}
+        <tr>
+            <td>{{ ticket.company }}</td>
+            <td>{{ ticket.date }}</td>
+            <td>{{ ticket.route }}</td>
+            <td>{{ ticket.departure }}</td>
+            <td>{{ ticket.arrival }}</td>
+            <td>{{ ticket.value }}</td>
+            <td>{{ ticket.quantity }}</td>
+            <td>
+                <button class="reserve-button">
+                    <a href={% url 'core:bookticket' ticket.id %}>Reservar</a>
+                </button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
