@@ -158,6 +158,10 @@ main {
     font-size: 1rem;
 }
 
+.search-container form input:focus {
+    border: 1px solid orange;
+}
+
 .search-container form button {
     width: 9rem;
     height: 3rem;

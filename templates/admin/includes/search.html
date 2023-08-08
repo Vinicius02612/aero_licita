@@ -1,5 +1,6 @@
 <div class="search-container">
     <form action="" method="post">
+        {% csrf_token %}
         <label for="origin">
             Origem
             <input type="text" name="origin" id="" placeholder="Picos, PI">

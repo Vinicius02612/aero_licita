@@ -104,10 +104,28 @@ def adminpage(request):
             "quantity": "10",
         },
     ]
-    return render(request, "admin/pages/admin.html", context={"tickets": tickets})
+    context = {"tickets": tickets}
+    return render(request, "admin/pages/admin.html", context)
 
 
 @csrf_exempt
 @login_required(login_url="/signin", redirect_field_name="redirect_to")
 def bookticketpage(request, slug):
-    return render(request, "admin/pages/bookticket.html", context={"slug": slug})
+    context = {
+        "slug": slug,
+        "ticket": {
+            "id": 2,
+            "company": "Latam airline",
+            "date": "04/08/2023",
+            "route": "GRU/PNZ",
+            "departure_place": "GRU",
+            "departure_time": "23:40",
+            "destination_place": "PNZ",
+            "destination_time": "02:10",
+            "arrival_hour": "02:10",
+            "arrival": "02:10",
+            "value": "R$ 950,00",
+            "quantity": "10",
+        },
+    }
+    return render(request, "admin/pages/bookticket.html", context)
