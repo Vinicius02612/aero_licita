@@ -12,7 +12,6 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("resize", () => {
     if (window.innerWidth > 848) {
-        console.log("funcionou")
         button_access_menu.style.display = "none";
         menu.classList.remove("active");
         menu.style.animation = "closeMenu 0.3s ease-in-out forwards";
@@ -20,8 +19,7 @@ window.addEventListener("resize", () => {
         bars = button_access_menu.querySelectorAll(".bar");
         bars.forEach(bar => {
             bar.style.position = "relative";
-        }
-        )
+        })
         bars[0].style.rotate = "0deg";
         bars[0].style.top = "0";
 
@@ -40,13 +38,11 @@ button_access_menu.addEventListener("click", () => {
         menu.style.animation = "closeMenu 0.3s ease-in-out forwards";
         setTimeout(() => {
             menu.style.display = "none";
-        }
-            , 500);
+        }, 500);
         bars = button_access_menu.querySelectorAll(".bar");
         bars.forEach(bar => {
             bar.style.position = "relative";
-        }
-        )
+        })
         bars[0].style.rotate = "0deg";
         bars[0].style.top = "0";
 

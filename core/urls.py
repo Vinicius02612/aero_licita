@@ -12,4 +12,5 @@ urlpatterns = [
     path("logout/", views.logoutuser, name="logout"),
     path("admin-management-page/", views.adminpage, name="adminpage"),
     path("book-ticket/<slug:slug>/", views.bookticketpage, name="bookticket"),
+    path("send-question/", views.contactform, name="sendquestion"),
 ]
