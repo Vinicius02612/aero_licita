@@ -12,6 +12,9 @@ from django.contrib.auth.models import User
 
 from django.views.decorators.csrf import csrf_exempt
 
+from .forms import ClientQuestionForm
+from django.contrib import messages
+
 
 # Create your views here.
 def homepage(request):
@@ -27,7 +30,25 @@ def aboutpage(request):
 
 
 def contactpage(request):
-    return render(request, "contact/page/contact.html")
+    form = ClientQuestionForm()
+    context = {"form": form}
+
+    return render(request, "contact/page/contact.html", context)
+
+
+def contactform(request):
+    if request.method == "POST":
+        form = ClientQuestionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Sua mensagem foi enviada com sucesso")
+            return redirect(reverse("core:contactpage"))
+        else:
+            messages.error(request, "Mensagem não enviada.")
+            return redirect(reverse("core:contactpage"))
+    else:
+        messages.error(request, "Mensagem não enviada.")
+        return redirect(reverse("core:contactpage"))
 
 
 @csrf_exempt
