@@ -16,6 +16,8 @@ from .forms import ClientQuestionForm
 from django.contrib import messages
 
 
+
+
 # Create your views here.
 def homepage(request):
     return render(request, "home/page/home.html")
@@ -24,6 +26,10 @@ def homepage(request):
 def signinpage(request):
     return render(request, "signin/page/signin.html")
 
+
+# create page for recovery password
+def forgotpass(request):
+    return render(request, "signin/page/forgotpass.html")
 
 def aboutpage(request):
     return render(request, "about/page/about.html")
