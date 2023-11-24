@@ -5,6 +5,7 @@
 }
 
 body {
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     display: column;
     gap: 0;
