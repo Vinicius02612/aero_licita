@@ -1,8 +1,23 @@
+:root {
+    --header-font: 'Roboto', sans-serif;
+    --main-font: 'Saira Semi Condensed', sans-serif;
+    --main-background-color: #00A473;
+    --footer-background-color: #397F8B;
+}
+
+
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: #263238;
 }
 
+
+
 main {
+    font-family:var(--main-font);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -12,6 +27,8 @@ main {
     padding-bottom: 0;
     margin: auto;
 }
+
+
 
 .signin-container {
     width: 20rem;
@@ -26,6 +43,8 @@ main {
     border-radius: 0.5rem;
 }
 
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -38,6 +57,7 @@ form input {
     width: 100%;
     height: 2.7rem;
     border-radius: 0.5rem;
+    background-color: #EBEBEB;
     border: 1px solid #27DEBF;
     padding: 0 1rem;
     font-size: 1rem;
@@ -54,7 +74,7 @@ form input::placeholder {
 }
 
 form button {
-    width: 80%;
+    width: 50%;
     height: 2.7rem;
     border-radius: 0.5rem;
     border: none;
@@ -66,13 +86,59 @@ form button {
 }
 
 form button:hover {
-    background: #222;
+    background: #22C694;
 }
 
 form a {
-    color: #00A473;
+    color: #ffffff9e;
     text-decoration: underline;
 }
+
+/* Estilo da pagina de recuperar senha */
+
+.signin-container-forgot{
+    width: 60rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: #C2E9DD1F;
+    padding: 5rem;
+    border-radius: 0.5rem;
+}
+
+.img-close{
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.close{
+    list-style: none;
+}
+
+
+.signin-container-forgot h3{
+    color: #fff;
+    font-size: 20pt;
+    margin: 0;
+}
+.signin-container-forgot p{
+    font-family:var(--header-font);
+    color: #fff;
+    font-size: 14pt;
+    font-weight: 500px;
+    margin-bottom: 20px;
+}
+
+.signin-container-forgot a{
+    color: #ffffff9e;
+    font-family:var(--header-font);
+    font-size: 14pt;
+
+}
+
 
 @media screen and (max-width:590px) {
     .signin-container {

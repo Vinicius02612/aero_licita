@@ -1,2 +1,1 @@
 Django==4.2.3
-amadeus==9.0.0
