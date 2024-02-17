@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'global/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/book-ticket/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ce9220c6d4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>Reservar Passagem</title>
+</head>
+
+<body>
+    {% include 'admin/includes/header.html' %}
+
+    <div class="row-container">
+        {% include 'admin/includes/sidemenu.html' %}
+        <main>
+            <section class="main-content">
+                <h2>Reservar Passagem</h2>
+                <div class="separator"></div>
+
+                <form action="">
+                    <section class="passenger-infos-container">
+
+                        <div class="passenger-infos">
+
+                            <h4>Informações do passageiro</h4>
+                            <div class="separator"></div>
+                            <div class="form-inputs-container">
+                                <label for="">
+                                    <span>Nome</span>
+                                    <input type="text" name="first_name" id="first_name" placeholder="Ex: José">
+                                </label>
+                                <label for="">
+                                    <span>Sobrenome</span>
+                                    <input type="text" name="last_name" id="last_name" placeholder="Ex: Silva">
+                                </label>
+                                <label for="">
+                                    <span>RG</span>
+                                    <input type="text" name="rg" id="rg" placeholder="Ex:1.000.000">
+                                </label>
+                                <label for="">
+                                    <span>Email</span>
+                                    <input type="email" name="email" id="email" placeholder="Ex: fulano@gmail.com">
+                                </label>
+                                <label for="">
+                                    <span>CPF</span>
+                                    <input type="text" name="cpf" id="cpf" placeholder="Ex:000.000.000-00">
+                                </label>
+                                <label for="">
+                                    <span>Telefone</span>
+                                    <input type="tel" name="telefone" id="telefone" placeholder="(00) 0000-9999">
+                                </label>
+                                <label for="">
+                                    <span>Telefone</span>
+                                    <input type="date" name="birthday" id="birthday" cu>
+                                </label>
+                                <label for="">
+                                    <span>Serviços especiaos</span>
+                                    <select name="" id="">
+                                        <option value="" checked="true">Não</option>
+                                        <option value="">Sim</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ticket-infos">
+                            <h4>Informações da passagem</h4>
+                            <div class="separator"></div>
+                            <div class="box-row">
+                                <p>{{ ticket.company }}</p>
+                                <p> Data: {{ ticket.date }} </p>
+                            </div>
+                            <div class="box-row">
+                                <div class="asdf">
+                                    Partida(lugar): {{ ticket.departure_place }} <br>
+                                    Horário: {{ ticket.departure_time }} <br>
+                                </div>
+                                <div class="asdf">
+                                    Destino(lugar): {{ ticket.destination_place }} <br>
+                                    Horário: {{ ticket.destination_time }} <br>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="payment-infos-container">
+                        <div class="payer-infos">
+                            <div>
+                                <h4>Informações do pagador</h4>
+                                <div class="separator"></div>
+                            </div>
+                            <div class="box-row ">
+                                <label for="">
+                                    <span>Nome</span>
+                                    <input type="text" name="first_name" id="first_name" placeholder="Ex: José">
+                                </label>
+                                <label for="">
+                                    <span>Sobrenome</span>
+                                    <input type="text" name="last_name" id="last_name" placeholder="Ex: Do Nascimento">
+                                </label>
+                                <label for="">
+                                    <span>RG</span>
+                                    <input type="text" name="rg" id="rg" placeholder="Ex:1.000.000">
+                                </label>
+                                <label for="">
+                                    <span>Email</span>
+                                    <input type="email" name="email" id="email" placeholder="Ex: fulano@gmail.com">
+                                </label>
+                                <label for="">
+                                    <span>CPF</span>
+                                    <input type="text" name="cpf" id="cpf" placeholder="Ex: fulano@gmail.com">
+                                </label>
+                                <label for="">
+                                    <span>Telefone</span>
+                                    <input type="tel" name="telefone" id="telefone" placeholder="Ex:000.000.000-00">
+                                </label>
+                                <label for="">
+                                    <span>Data de Nascimento</span>
+                                    <input type="date" name="birthday" id="birthday" placeholder="(00) 0000-9999">
+                                </label>
+                                <label for="">
+                                    <span>CEP</span>
+                                    <input type="text" name="cep" id="cep" placeholder="Ex: 60.000-00">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="payment-type">
+                            <div>
+                                <h4>Forma de pagamento</h4>
+                                <div class="separator"></div>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    {% include 'global/includes/footer.html' %}
+</body>
+
+</html>
