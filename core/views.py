@@ -29,6 +29,14 @@ def signinpage(request):
 
 # create page for recovery password
 def forgotpass(request):
+    if 'meu_campo' in request.GET:
+        meu_dado = request.GET['meu_campo']
+        if meu_dado == User.email:
+            print(meu_dado)
+        else:
+            messages.error(request, "Você não possui nenhum cadastro com esse email.")
+            return render(request, "signin/page/forgotpass.html")
+
     return render(request, "signin/page/forgotpass.html")
 
 def aboutpage(request):

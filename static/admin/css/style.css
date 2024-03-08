@@ -108,7 +108,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: calc(100% - 13rem);
     height: 100%;
     padding: 3rem;
     overflow: hidden;
@@ -126,7 +125,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 2rem 0;
     margin-bottom: 2rem;

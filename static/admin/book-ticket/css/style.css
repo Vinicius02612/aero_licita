@@ -1,0 +1,563 @@
+body {
+    background: #D5D5D5;
+}
+
+.progress {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #00A473;
+}
+
+
+
+.form {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    width: 55%;
+    background: #fff;
+    border-radius: 1rem;
+}
+
+.passenger-infos-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.passenger-infos-container .passenger-infos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    right: 0;
+}
+
+.form-inputs-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.passenger-infos label span {
+    color: var(--main-background-color);
+}
+
+.passenger-infos label input:focus {
+    border: 1px solid var(--main-background-color);
+}
+
+
+.passenger-type {
+    justify-content: space-around;
+}
+
+.passenger-type .box-row {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.passenger-type .box-row label {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.passenger-type .box-row input {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    outline: none;
+    font-size: 100%;
+    accent-color: #00A473;
+}
+
+
+input::placeholder {
+    color: #296C587A
+}
+
+select::placeholder {
+    color: #296C587A
+}
+
+.passenger-infos label select:focus {
+    border: 1px solid var(--main-background-color);
+}
+
+
+.box-row .asdf {
+    border: 1px solid var(--main-background-color);
+    border-radius: 1rem;
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: .9rem
+}
+
+.passed {
+    background: #00A473;
+}
+
+.passenger-infos-docs {
+    width: 90%;
+    height: 430px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: var(--main-font);
+    gap: 1rem 2rem;
+    transition: 300ms all ease-in-out;
+    overflow: hidden;
+}
+
+
+.passenger-infos-docs .box-column {
+    gap: 0;
+}
+
+.passenger-infos-docs label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-size: .8rem;
+    transition: 300ms all ease-in-out;
+    animation: alternate 200ms ease-in-out;
+}
+
+.passenger-infos-docs label span {
+    width: auto;
+}
+
+/*  */
+.passenger-infos-docs .box-column label span {
+    color: var(--main-background-color);
+}
+
+*/ .passenger-infos-docs .separator {
+    margin: 0;
+}
+
+.passenger-infos-docs .box-row {
+    width: 90%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0
+}
+
+.passenger-infos-docs .box-row label {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.passenger-infos-docs label span {
+    text-align: start;
+    align-self: flex-start;
+    color: var(--main-background-color);
+}
+
+.passenger-infos-docs label input {
+    width: 90%;
+    height: 50px;
+    font-size: 1rem;
+    padding-left: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    outline: none;
+    align-self: center;
+    transition: all .3s ease-in-out;
+}
+
+.passenger-infos-docs .box-row label input:focus {
+    border: 1px solid var(--main-background-color);
+}
+
+.passenger-infos-docs .box-row label select:focus {
+    border: 1px solid var(--main-background-color);
+}
+
+.passenger-infos-docs .box-row label input::placeholder {
+    color: #296C587A
+}
+
+.passenger-infos-docs .box-row label select::placeholder {
+    color: #296C587A
+}
+
+.passenger-infos-docs label select {
+    position: relative;
+    left: 0;
+    width: 6rem;
+    height: 50px;
+    font-size: 1rem;
+    padding-left: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    outline: none;
+    align-self: flex-start;
+    transition: all .3s ease-in-out;
+
+    /* margin-left: -9px; */
+}
+
+.shadow {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.payer-infos-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.payer-infos-docs {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: var(--main-font);
+    gap: 2rem;
+    transition: 300ms all ease-in-out;
+    overflow: hidden;
+}
+
+.payer-infos-docs .box-column {
+    gap: 0;
+}
+
+.payer-infos-docs label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-size: .8rem;
+    transition: 300ms all ease-in-out;
+    animation: alternate 200ms ease-in-out;
+}
+
+.payer-infos-docs label span {
+    width: auto;
+}
+
+.payer-infos-docs .separator {
+    margin: 0;
+}
+
+.payer-infos-docs .box-row {
+    width: 90%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0
+}
+
+.payer-infos-docs .box-row label {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.payer-infos-docs label span {
+    text-align: start;
+    align-self: flex-start;
+    color: var(--main-background-color);
+}
+
+.payer-infos-docs label input {
+    width: 90%;
+    height: 50px;
+    font-size: 1rem;
+    padding-left: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    outline: none;
+    align-self: center;
+    transition: all .3s ease-in-out;
+}
+
+.payer-infos-docs .box-row label input:focus {
+    border: 1px solid var(--main-background-color);
+}
+
+.payer-infos-docs .box-row label select:focus {
+    border: 1px solid var(--main-background-color);
+}
+
+.payer-infos-docs .box-row label input::placeholder {
+    color: #296C587A
+}
+
+#passenger-payer {
+    position: relative;
+    left: 0;
+    width: 6rem;
+    height: 50px;
+    font-size: 1rem;
+    padding-left: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    outline: none;
+    align-self: flex-start;
+    transition: all .3s ease-in-out;
+}
+
+.payment-infos-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.payment-type {
+    justify-content: space-around;
+}
+
+.payment-type .box-row {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-type .box-row label {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.payment-type .box-row input {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    outline: none;
+    font-size: 100%;
+    accent-color: #00A473;
+}
+
+.card_flag {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+
+}
+
+.payment-infos-docs {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: var(--main-font);
+    gap: 2rem;
+    transition: 300ms all ease-in-out;
+    overflow: hidden;
+}
+
+.payment-infos-docs .box-column {
+    gap: 0;
+}
+
+.payment-infos-docs label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-size: .8rem;
+    transition: 300ms all ease-in-out;
+    animation: alternate 200ms ease-in-out;
+}
+
+.payment-infos-docs label span {
+    width: auto;
+}
+
+.payment-infos-docs .separator {
+    margin: 0;
+}
+
+.payment-infos-docs .box-row {
+    width: 90%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0
+}
+
+.payment-infos-docs .box-row label {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-infos-docs label span {
+    text-align: start;
+    align-self: flex-start;
+    color: var(--main-background-color);
+}
+
+.payment-infos-docs label input {
+    width: 90%;
+    height: 50px;
+    font-size: 1rem;
+    padding-left: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    outline: none;
+    align-self: center;
+    transition: all .3s ease-in-out;
+}
+
+.payment-infos-docs .box-row label input:focus {
+    border: 1px solid var(--main-background-color);
+}
+
+.payment-infos-docs .box-row label select:focus {
+    border: 1px solid var(--main-background-color);
+}
+
+.payment-infos-docs .box-row label input::placeholder {
+    color: #296C587A
+}
+
+
+
+@media screen and (max-width: 1367px) {
+    .passenger-infos-docs label span {
+        font-size: 11px;
+    }
+}
+
+.ticket-infos-container {
+    width: 40%;
+    border-radius: 1rem;
+    background: #fff;
+    min-height: 100%;
+    height: 100%;
+}
+
+.payment-infos {
+    background: #263238;
+    color: #fff;
+    height: auto;
+    border-radius: 1rem 1rem 0 0;
+    padding: 2rem;
+}
+
+.ticket-infos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+
+
+.ticket-infos div h4 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: grid;
+}
+
+.passenger-active {
+    animation: show 200ms ease-in-out forwards;
+}
+
+.passenger-hidden {
+    animation: hide 1s ease-in-out forwards;
+}
+
+.form-active {
+    transform-origin: right center;
+    animation: next-form 300ms ease-in-out forwards;
+    overflow: hidden;
+}
+
+.form-hidden {
+    display: none;
+}
+
+@keyframes next-form {
+    from {
+        display: flex;
+        width: 0;
+        transform: scaleX(0);
+    }
+
+    to {
+        width: 100%;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes show {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 430px;
+    }
+}
+
+@keyframes hide {
+    0% {
+        display: flex;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}

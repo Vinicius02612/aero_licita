@@ -1,5 +1,7 @@
-# Projeto Web com Python e Django
+# Projeto Web - Sistema de reserva de passagens areas.
 
+
+## Rode na sua máquina
 1. Instale o python3.11
 2. Crie um ambiente virtual com o comando `python3 -m venv venv`
 3. Ative o ambiente virtual com o comando `source venv/bin/activate`

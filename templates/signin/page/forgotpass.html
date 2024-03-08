@@ -16,12 +16,10 @@
     <main>
            
             <section class="signin-container-forgot">  
-               
-    
                 <form action="/forgotpass/" method="get">
                     {% csrf_token %}
                     <h3>Recuperação de Senha</h3>
-                    <p>Digite seu email no campo abaixo e você receberá um código para recuperar sua senha. </p>
+                    <p>Digite o email que você possui login no campo abaixo e você receberá um código para recuperar sua senha. </p>
                     <input class="input-email" type="email" name="email" id="email" placeholder="ex:meuemail@gmail.com">
                     <button type="submit">Receber código</button>
                     <a href="{% url 'core:signin' %}">Voltar</a>
