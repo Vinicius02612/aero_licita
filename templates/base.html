@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+{% include 'global/includes/head.html' %}
+<body>
+    {% include 'global/includes/header.html' %}
+    <main>
+        {% comment %} Pagina principal {% endcomment %}
+        {% include 'home/page/home.html' %}
+
+        {% comment %} Pagina Sobre {% endcomment %}
+        {% include 'about/page/about.html' %}
+
+        {% comment %} Pagina de contato{% endcomment %}
+        {% include 'contact/page/contact.html' %}
+
+       
+    </main>
+    {% comment %} Rodapé  da pagina {% endcomment %}
+    {% include 'global/includes/footer.html' %}
+     
+    
+</body>
+
+</html>
