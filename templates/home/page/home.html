@@ -1,100 +1,63 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    {% include 'global/includes/head.html' %}
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
-    <script src="https://kit.fontawesome.com/ce9220c6d4.js" crossorigin="anonymous"></script>
-
-    <title>AeroLicita</title>
-</head>
-
-<body>
-    {% include 'global/includes/header.html' %}
-    <main>
-        <section class="main-tickets">
-            <img src="{% static 'home/img/first_image.png' %}">
-            <div class="presentation">
-                {% if user.is_authenticated %}
-                <p>
-                    Viage com conforto, reserve sua passagem com a <span style="font-weight: bold;">AeroLicita!</span>
-                </p>
-                {% else %}
-                <p class="not-logged-description">
-                    Viage com conforto, reserve sua passagem com a <span style="font-weight: bold;">AeroLicita!</span>
-                    <br>
-                    <span style="font-size: 1.5rem; color: #000; -webkit-text-stroke:transparent     ">Faça o <a
-                            href="/signin/"
-                            style="color: var(--footer-background-color); text-decoration: underline; font-weight: 600;">login</a>
-                        para agendar sua
-                        viagem</span>
-                </p>
-                {% endif %}
-            </div>
-            {% if user.is_authenticated %}
-            <div class="tickets-container">
-                <div class="ticket">
-                    <h2>Nome/Logo da empresa</h2>
-                    <div class="values-container">
-                        <div class="ticket-value">
-                            <p>Valor da ida:</p>
-                            <p>R$ 150,00</p>
-                        </div>
-                        <div class="ticket-value">
-                            <p>Valor da volta:</p>
-                            <p>R$ 250,00</p>
-                        </div>
-                    </div>
-                    {% if user.is_staff %}
-                    <button>
-                        <a href="#">Agendar</a>
-                    </button>
-                    {% endif %}
+<section class="main-tickets">
+    <img src="{% static 'home/img/first_image.png' %}">
+    <div class="presentation">
+        <p>
+                Viage com conforto, reserve sua passagem com a <span style="font-weight: bold;">AeroLicita!</span>
+        </p>
+    </div>
+    <div class="tickets-container">
+        <div class="ticket">
+            <h2>Nome/Logo da empresa</h2>
+            <div class="values-container">
+                <div class="ticket-value">
+                    <p>Valor da ida:</p>
+                    <p>R$ 150,00</p>
                 </div>
-                <div class="ticket">
-                    <h2>Nome/Logo da empresa</h2>
-                    <div class="values-container">
-                        <div class="ticket-value">
-                            <p>Valor da ida:</p>
-                            <p>R$ 150,00</p>
-                        </div>
-                        <div class="ticket-value">
-                            <p>Valor da volta:</p>
-                            <p>R$ 250,00</p>
-                        </div>
-                    </div>
-                    {% if user.is_staff %}
-                    <button>
-                        <a href="#">Agendar</a>
-                    </button>
-                    {% endif %}
-                </div>
-                <div class="ticket">
-                    <h2>Nome/Logo da empresa</h2>
-                    <div class="values-container">
-                        <div class="ticket-value">
-                            <p>Valor da ida:</p>
-                            <p>R$ 150,00</p>
-                        </div>
-                        <div class="ticket-value">
-                            <p>Valor da volta:</p>
-                            <p>R$ 250,00</p>
-                        </div>
-                    </div>
-                    {% if user.is_staff %}
-                    <button>
-                        <a href="#">Agendar</a>
-                    </button>
-                    {% endif %}
+                <div class="ticket-value">
+                    <p>Valor da volta:</p>
+                    <p>R$ 250,00</p>
                 </div>
             </div>
-            {% endif %}
-        </section>
+            
+            <button>
+                <a href="#">Agendar</a>
+            </button>
 
-    </main>
-    {% include 'global/includes/footer.html' %}
-    <script src="{% static 'home/js/menu.js' %}"></script>
-</body>
-
-</html>
+        </div>
+        <div class="ticket">
+            <h2>Nome/Logo da empresa</h2>
+            <div class="values-container">
+                <div class="ticket-value">
+                    <p>Valor da ida:</p>
+                    <p>R$ 150,00</p>
+                </div>
+                <div class="ticket-value">
+                    <p>Valor da volta:</p>
+                    <p>R$ 250,00</p>
+                </div>
+            </div>
+           
+            <button>
+                <a href="#">Agendar</a>
+            </button>
+         
+        </div>
+        <div class="ticket">
+            <h2>Nome/Logo da empresa</h2>
+            <div class="values-container">
+                <div class="ticket-value">
+                    <p>Valor da ida:</p>
+                    <p>R$ 150,00</p>
+                </div>
+                <div class="ticket-value">
+                    <p>Valor da volta:</p>
+                    <p>R$ 250,00</p>
+                </div>
+            </div>
+            <button>
+                <a href="#">Agendar</a>
+            </button>
+        </div>
+    </div>
+</section>
