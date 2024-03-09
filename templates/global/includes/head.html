@@ -1,7 +1,7 @@
 {% load static %}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href={% static 'global/css/style.css' %}>
+{% comment %} link para fontes  {% endcomment %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
@@ -9,3 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,200;0,300;0,400;0,500;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+{% comment %} scripts de js {% endcomment %}
+<script src="{% static 'home/js/menu.js' %}"></script>
+<script src="https://kit.fontawesome.com/ce9220c6d4.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/ce9220c6d4.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/ce9220c6d4.js" crossorigin="anonymous"></script>
+{% comment %} Link para stylesheets {% endcomment %}
+<link rel="stylesheet" href={% static 'global/css/style.css' %}>
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'about/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'contact/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'global/css/footer.css' %}">
+<title>AeroLicita</title>
