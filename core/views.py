@@ -20,7 +20,7 @@ from django.contrib import messages
 
 # Create your views here.
 def homepage(request):
-    return render(request, "home/page/home.html")
+    return render(request, "base.html")
 
 
 def signinpage(request):
@@ -44,10 +44,9 @@ def aboutpage(request):
 
 
 def contactpage(request):
-    form = ClientQuestionForm()
-    context = {"form": form}
-
-    return render(request, "contact/page/contact.html", context)
+    if request.method != 'POST':
+        form = ClientQuestionForm()
+        return render(request, "contact/page/contact.html", {'form': form })
 
 
 def contactform(request):
@@ -56,13 +55,15 @@ def contactform(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Sua mensagem foi enviada com sucesso")
-            return redirect(reverse("core:contactpage"))
+            return render(request, "base.html")
         else:
             messages.error(request, "Mensagem não enviada.")
-            return redirect(reverse("core:contactpage"))
+            return render(request, "base.html")
+            
     else:
         messages.error(request, "Mensagem não enviada.")
-        return redirect(reverse("core:contactpage"))
+        return render(request, "base.html")
+        
 
 
 @csrf_exempt
