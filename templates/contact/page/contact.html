@@ -1,38 +1,24 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
+<section class="contact-us">
+    <h2>Entre em contato conosco</h2>
+    <p>Agende sua viagem com a AeoroLicita</p>
+    <div class="contact-us-content">
+        <img src="{% static 'home/img/cardContato.png' %}">
+        <form action={% url 'core:sendquestion' %} method="POST">
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% csrf_token %}
+            {{ form }}
+        <button type="submit">Enviar</button> 
+        </form>
+    </div>
+</section>
 
-<head>
-    {% include 'global/includes/head.html' %}
-    <link rel="stylesheet" href="{% static 'contact/css/style.css' %}">
-    <script src="https://kit.fontawesome.com/ce9220c6d4.js" crossorigin="anonymous"></script>
 
-    <title>AeroLicita | Sobre</title>
-</head>
 
-<body>
-    {% include 'global/includes/header.html' %}
-    <main>
-        <section class="contact-us">
-            <h2>Entre em contato conosco</h2>
-            <p>Agende sua viagem com a AeoroLicita</p>
-            <div class="contact-us-content">
-                <img src="{% static 'home/img/cardContato.png' %}">
-                <form action={% url 'core:sendquestion' %} method="POST">
-                    {% if messages %}
-                        <ul class="messages">
-                            {% for message in messages %}
-                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                    {% csrf_token %}
-                    {{ form }}
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </section>
-    </main>
-    {% include 'global/includes/footer.html' %}
-</body>
-</html>
+
