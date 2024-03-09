@@ -39,7 +39,8 @@
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 15pt;
     text-align: justify;
 }
 
